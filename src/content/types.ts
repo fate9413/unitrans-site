@@ -154,6 +154,8 @@ export interface Dictionary {
       successNote: string;
       error: string;
       required: string;
+      consent: string;
+      consentLink: string;
     };
     info: {
       emailLabel: string;
@@ -175,5 +177,6 @@ export interface Dictionary {
     localTime: string;
     rights: string;
     designSystem: string;
+    legal: { privacy: string; cookies: string; terms: string };
   };
 }

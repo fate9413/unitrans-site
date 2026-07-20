@@ -289,6 +289,8 @@ export const bg: Dictionary = {
       successNote: "Ще се свържем с вас възможно най-бързо.",
       error: "Нещо се обърка. Моля, пишете директно на uniagent@unitrans.bg.",
       required: "Задължително поле",
+      consent: "Изпращайки формата, се съгласявате с",
+      consentLink: "Политиката за поверителност",
     },
     info: {
       emailLabel: "Имейл",
@@ -311,5 +313,10 @@ export const bg: Dictionary = {
     localTime: "Местно време · Варна",
     rights: "Всички права запазени.",
     designSystem: "Дизайн система",
+    legal: {
+      privacy: "Поверителност",
+      cookies: "Бисквитки",
+      terms: "Условия за ползване",
+    },
   },
 };

@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { notFound } from "next/navigation";
+import { redirect } from "next/navigation";
 import { Analytics } from "@vercel/analytics/react";
 import { getDictionary, LANGS } from "@/content";
 import "../globals.css";
@@ -77,7 +77,8 @@ export default async function LangLayout({
   params: Promise<{ lang: string }>;
 }) {
   const { lang } = await params;
-  if (!LANGS.includes(lang as (typeof LANGS)[number])) notFound();
+  // Unknown top-level segments (e.g. /foo) land here as `lang` — send them home.
+  if (!LANGS.includes(lang as (typeof LANGS)[number])) redirect("/en");
   return (
     <html lang={lang}>
       <head>

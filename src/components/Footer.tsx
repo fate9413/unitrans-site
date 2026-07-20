@@ -90,11 +90,20 @@ export function Footer({ dict, lang }: { dict: Dictionary; lang: string }) {
           </div>
         </div>
 
-        <div className="mt-16 flex flex-col items-start justify-between gap-4 border-t border-white/10 pt-8 sm:flex-row sm:items-center">
+        <div className="mt-16 flex flex-col items-start justify-between gap-4 border-t border-white/10 pt-8 lg:flex-row lg:items-center">
           <p className="micro text-white/40">
             © {year} Unitrans Ltd. & Uniagent Varna Ltd. {dict.footer.rights}
           </p>
-          <div className="flex items-center gap-8">
+          <div className="flex flex-wrap items-center gap-x-8 gap-y-3">
+            <a href={`/${lang}/privacy`} className="micro link-slide text-white/40 hover:text-white/70">
+              {dict.footer.legal.privacy}
+            </a>
+            <a href={`/${lang}/cookies`} className="micro link-slide text-white/40 hover:text-white/70">
+              {dict.footer.legal.cookies}
+            </a>
+            <a href={`/${lang}/terms`} className="micro link-slide text-white/40 hover:text-white/70">
+              {dict.footer.legal.terms}
+            </a>
             <VarnaClock label={dict.footer.localTime} />
             <a href={`/${lang}/design-system`} className="micro link-slide text-white/40 hover:text-white/70">
               {dict.footer.designSystem}

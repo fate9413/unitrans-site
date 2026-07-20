@@ -222,6 +222,16 @@ export function Contact({ dict }: { dict: Dictionary }) {
                       >
                         {status === "sending" ? contact.form.sending : contact.form.submit}
                       </Button>
+                      <p className="mt-4 text-[0.8125rem] leading-relaxed text-steel">
+                        {contact.form.consent}{" "}
+                        <a
+                          href={`/${dict.locale}/privacy`}
+                          className="underline decoration-line underline-offset-2 transition-colors hover:text-ink"
+                        >
+                          {contact.form.consentLink}
+                        </a>
+                        .
+                      </p>
                       {status === "error" && (
                         <p className="mt-4 text-[0.875rem] text-[#b4232a]">
                           {contact.form.error}

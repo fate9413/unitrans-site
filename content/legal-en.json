@@ -1,0 +1,187 @@
+{
+ "privacy": {
+  "title": "Privacy policy",
+  "updated": "Last updated: 17 July 2026",
+  "intro": "This policy explains what personal data Unitrans Ltd. and Uniagent Varna Ltd. collect through this website, why we collect it and what rights you have. We keep data collection to the minimum required to answer your enquiry.",
+  "sections": [
+   {
+    "h": "Who we are",
+    "p": [
+     "Unitrans Ltd. and Uniagent Varna Ltd., 1, Vardar Str., 9000 Varna, Bulgaria, are the joint controllers of personal data collected through this website.",
+     "For any question regarding this policy or your data, contact us at uniagent@unitrans.bg or +359 52 632 130."
+    ]
+   },
+   {
+    "h": "What data we collect",
+    "p": [
+     "Contact form: your name, company, email address, telephone number (optional), the topic you select and the message you write. We only collect what you choose to send us.",
+     "Analytics: anonymous, aggregated statistics about page visits (pages viewed, country, device type, referrer). This data is collected without cookies and cannot identify you personally.",
+     "Server logs: our hosting provider automatically records technical data such as IP address and browser type for security and reliability purposes."
+    ]
+   },
+   {
+    "h": "Why we use it",
+    "p": [
+     "To respond to your enquiry and, where relevant, to provide the ship agency, freight forwarding or customs services you ask about. The legal basis is our legitimate interest in responding to business enquiries and, where a contract follows, the performance of that contract.",
+     "To understand how the website is used and improve it. The legal basis is our legitimate interest in maintaining an effective website. This data is anonymous.",
+     "To protect the website against abuse and spam. The legal basis is our legitimate interest in security."
+    ]
+   },
+   {
+    "h": "How the contact form works",
+    "p": [
+     "When you submit the form, the content is delivered by email to our team. The message is not stored in a database on this website — there is no database.",
+     "The email itself is retained in our corporate mailbox for as long as needed to handle your enquiry and to comply with commercial and accounting obligations."
+    ]
+   },
+   {
+    "h": "Who has access",
+    "p": [
+     "Only our staff who handle client enquiries.",
+     "We use the following processors: Vercel Inc. (website hosting and infrastructure) and Resend (email delivery for the contact form). They process data on our instructions and under contractual data protection commitments.",
+     "We do not sell, rent or share your data for advertising purposes."
+    ]
+   },
+   {
+    "h": "How long we keep it",
+    "p": [
+     "Enquiry emails: for the duration of the enquiry and any resulting business relationship, plus the retention periods required by Bulgarian commercial and accounting law.",
+     "Anonymous analytics: retained in aggregated form only, with no personal identifiers.",
+     "Server logs: short-term, as set by our hosting provider."
+    ]
+   },
+   {
+    "h": "Your rights",
+    "p": [
+     "Under the GDPR you have the right to access your data, to have it corrected or erased, to restrict or object to processing, and to data portability.",
+     "To exercise any of these rights, write to uniagent@unitrans.bg. We respond within one month.",
+     "You also have the right to lodge a complaint with the Bulgarian Commission for Personal Data Protection (CPDP), 2 Prof. Tsvetan Lazarov Blvd., Sofia 1592, www.cpdp.bg."
+    ]
+   },
+   {
+    "h": "Security",
+    "p": [
+     "The website is served exclusively over HTTPS. It has no database, no user accounts and no administration panel exposed to the public internet, which substantially reduces the attack surface.",
+     "Access to our mailbox is protected by the security measures of our corporate email provider."
+    ]
+   },
+   {
+    "h": "Changes",
+    "p": [
+     "If we change this policy, we will update the date at the top of this page. Material changes will be highlighted on the website."
+    ]
+   }
+  ]
+ },
+ "cookies": {
+  "title": "Cookie policy",
+  "updated": "Last updated: 17 July 2026",
+  "intro": "This website is deliberately light on cookies. We use no advertising cookies, no tracking pixels and no third-party profiling. This page explains exactly what is stored on your device.",
+  "sections": [
+   {
+    "h": "What cookies are",
+    "p": [
+     "Cookies are small text files a website stores on your device. Similar technologies include local storage, which works in much the same way.",
+     "Cookies are described as 'essential' when the website cannot function properly without them, and 'non-essential' when they serve analytics, personalisation or advertising."
+    ]
+   },
+   {
+    "h": "What we use",
+    "p": [
+     "Local storage — 'uu-cookie-ack': remembers that you have seen the notice at the bottom of the screen, so it is not shown on every visit. It contains a single value and no personal data. It stays until you clear your browser storage.",
+     "That is the only item this website stores on your device."
+    ]
+   },
+   {
+    "h": "Analytics without cookies",
+    "p": [
+     "We use Vercel Web Analytics to count page views. It is privacy-first by design: it sets no cookies, does not fingerprint visitors and does not track individuals across websites.",
+     "It records aggregate data only — which pages are viewed, from which country, on which device type. None of it identifies you."
+    ]
+   },
+   {
+    "h": "What we deliberately do not use",
+    "p": [
+     "No Google Analytics. No Facebook Pixel. No advertising or remarketing cookies. No cross-site trackers. No session recording or heatmaps.",
+     "This is why you are shown a short notice rather than a consent wall: there is nothing to consent to beyond the essentials."
+    ]
+   },
+   {
+    "h": "Managing cookies",
+    "p": [
+     "You can clear or block storage from your browser settings at any time. Because we use no non-essential cookies, doing so will not affect how the website works — you will simply see the notice again.",
+     "Browser instructions: Chrome, Safari, Firefox and Edge all offer this under Settings → Privacy."
+    ]
+   },
+   {
+    "h": "Embedded content",
+    "p": [
+     "Links to Google Maps open in a new tab on Google's own website, where Google's cookie policy applies. We do not embed maps, videos or social media widgets that would load third-party cookies on our pages."
+    ]
+   }
+  ]
+ },
+ "terms": {
+  "title": "Terms of use",
+  "updated": "Last updated: 17 July 2026",
+  "intro": "These terms govern your use of this website. They do not govern our commercial services, which are agreed separately in writing for each engagement.",
+  "sections": [
+   {
+    "h": "The website",
+    "p": [
+     "This website is operated by Unitrans Ltd. and Uniagent Varna Ltd., 1, Vardar Str., 9000 Varna, Bulgaria.",
+     "By using it, you accept these terms. If you do not accept them, please do not use the website."
+    ]
+   },
+   {
+    "h": "Information provided",
+    "p": [
+     "The content describes our services and experience for general information. It is not a binding offer, quotation or professional advice.",
+     "Service scope, prices, timelines and liability are agreed individually, in writing, for each engagement. Nothing on this website creates a contract between us.",
+     "We take care to keep the information accurate and current, but we do not warrant that it is complete or error-free at all times."
+    ]
+   },
+   {
+    "h": "Intellectual property",
+    "p": [
+     "The design, text, code, photographs and layout of this website are owned by Unitrans Ltd. and Uniagent Varna Ltd. and are protected by copyright.",
+     "You may view, download and print pages for your own business use in evaluating our services. Any other reproduction, republication or commercial use requires our prior written consent.",
+     "Third-party trademarks and logos shown on this website — including those of our clients and partners — remain the property of their respective owners and are displayed for identification purposes only."
+    ]
+   },
+   {
+    "h": "Acceptable use",
+    "p": [
+     "Do not use this website unlawfully, attempt to gain unauthorised access to it, introduce malicious code, or use automated systems to extract data at a rate that could impair its operation.",
+     "Do not use the contact form to send unsolicited commercial messages."
+    ]
+   },
+   {
+    "h": "External links",
+    "p": [
+     "Where we link to other websites, we do so for convenience. We have no control over their content and accept no responsibility for it."
+    ]
+   },
+   {
+    "h": "Liability",
+    "p": [
+     "To the fullest extent permitted by Bulgarian law, we exclude liability for any loss arising from the use of, or inability to use, this website, or from reliance on information published on it.",
+     "Nothing in these terms limits liability that cannot be limited by law."
+    ]
+   },
+   {
+    "h": "Governing law",
+    "p": [
+     "These terms are governed by the laws of the Republic of Bulgaria. Disputes are subject to the jurisdiction of the competent Bulgarian courts.",
+     "Consumers benefit from the mandatory protections of the law of their country of residence, where applicable."
+    ]
+   },
+   {
+    "h": "Contact",
+    "p": [
+     "Questions about these terms: uniagent@unitrans.bg, +359 52 632 130."
+    ]
+   }
+  ]
+ }
+}

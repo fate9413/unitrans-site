@@ -289,6 +289,8 @@ export const en: Dictionary = {
       successNote: "We will get back to you as soon as possible.",
       error: "Something went wrong. Please write directly to uniagent@unitrans.bg.",
       required: "Required field",
+      consent: "By submitting the form you agree to our",
+      consentLink: "Privacy Policy",
     },
     info: {
       emailLabel: "Email",
@@ -311,5 +313,10 @@ export const en: Dictionary = {
     localTime: "Local time · Varna",
     rights: "All rights reserved.",
     designSystem: "Design system",
+    legal: {
+      privacy: "Privacy",
+      cookies: "Cookies",
+      terms: "Terms of Use",
+    },
   },
 };
