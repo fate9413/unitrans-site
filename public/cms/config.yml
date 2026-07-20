@@ -11,7 +11,7 @@ backend:
   name: github
   repo: fate9413/unitrans-site
   branch: main
-  base_url: https://unitrans.bg # ← след деплой: реалният адрес на сайта (хоства OAuth ръчката)
+  base_url: https://unitrans-site.vercel.app # при закачане на домейн: смени на https://unitrans.bg (+ callback в GitHub OAuth App)
   auth_endpoint: /api/oauth
 
 # Позволява локална работа без GitHub, когато decap-server върви (npm run cms)
