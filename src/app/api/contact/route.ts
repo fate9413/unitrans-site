@@ -25,7 +25,13 @@ export async function POST(req: Request) {
 
   const apiKey = process.env.RESEND_API_KEY;
   if (!apiKey) {
-    // Not configured yet (local preview) — accept and log so the UX can be tested.
+    if (process.env.VERCEL) {
+      // Production without email configured — fail honestly so the visitor
+      // sees the direct-email fallback instead of a false success.
+      console.error("[contact] RESEND_API_KEY missing in production — enquiry NOT delivered");
+      return NextResponse.json({ ok: false, error: "not-configured" }, { status: 503 });
+    }
+    // Local development — accept and log so the UX can be tested.
     console.info("[contact] demo submission:", { name, company, email, phone, topic });
     return NextResponse.json({ ok: true, demo: true });
   }

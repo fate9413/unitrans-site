@@ -105,7 +105,7 @@ export function Header({ dict, lang }: { dict: Dictionary; lang: string }) {
 
           <div className="flex shrink-0 items-center gap-3">
             <a
-              href={dict.nav.langSwitch.href}
+              href={pathname.replace(/^\/(bg|en)(?=\/|$)/, dict.nav.langSwitch.href) || dict.nav.langSwitch.href}
               aria-label={dict.nav.langSwitch.label}
               className={cn(
                 "micro border px-3 py-2 transition-colors duration-300",
