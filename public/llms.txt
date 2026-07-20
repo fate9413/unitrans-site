@@ -29,6 +29,7 @@
 - /en/cargo — grain & bulk cargo expertise (wheat, corn, barley, sunflower, rapeseed, oils)
 - /en/ports — all 10 Bulgarian ports covered + live AIS vessel map
 - /en/contact — enquiry form, phone, email, office address
+- /en/nominate — structured vessel nomination form (port, cargo, quantity, laycan)
 - /en/blog — practical articles on Bulgarian port operations
 
 ## Blog highlights

@@ -246,9 +246,58 @@ export const pagesEn: PagesDict = {
       { title: "Quote & nomination", text: "We reply with terms and scope. On agreement, you nominate us as agent/forwarder." },
       { title: "Operation", text: "We take over the vessel and cargo — with daily reports until completion." },
     ],
+    nominateBanner: "Nominating a specific vessel? The structured form sends everything we need at once.",
+    nominateBannerCta: "Vessel nomination form",
     mapKicker: "The office",
     mapTitle: "Head office — Varna.",
     mapAddress: "1, Vardar Str., 9000 Varna, Bulgaria",
+  },
+
+  nominate: {
+    hero: {
+      kicker: "Nomination",
+      title: "Nominate a vessel.",
+      intro:
+        "A structured request with everything the duty team needs to know — we reply with terms and agency confirmation.",
+    },
+    form: {
+      sectionContact: "Contact",
+      sectionVessel: "Vessel & port",
+      sectionCargo: "Cargo & dates",
+      company: "Company",
+      name: "Contact person",
+      email: "Email",
+      phone: "Phone",
+      vessel: "Vessel name",
+      vesselHint: "Not fixed yet? Leave blank",
+      port: "Port",
+      operation: "Operation",
+      operations: { load: "Loading", discharge: "Discharging" },
+      cargoType: "Cargo",
+      cargoPlaceholder: "e.g. wheat, corn, fertilisers…",
+      quantity: "Quantity",
+      quantityUnit: "tonnes",
+      laycanFrom: "Laycan from",
+      laycanTo: "Laycan to",
+      message: "Additional information",
+      submit: "Send nomination request",
+      sending: "Sending…",
+      success: "Your request has been sent.",
+      successNote: "The duty team will come back to you with terms and confirmation.",
+      error: "Something went wrong. Please write directly to uniagent@unitrans.bg.",
+      freeFormNote: "Prefer free text?",
+      freeFormCta: "Standard contact form",
+    },
+    aside: {
+      title: "What happens after you submit",
+      text: "We review the request, confirm port and terminal availability for the period and come back with a quote and terms. Upon nomination we take over the vessel from that moment — with full coordination and daily reports.",
+      dutyLabel: "Duty team · 365 days",
+    },
+  },
+
+  downloads: {
+    presentationLabel: "Company presentation (PDF)",
+    presentationNote: "Introduce us to your partners — the full presentation, ready to download.",
   },
 
   blog: {

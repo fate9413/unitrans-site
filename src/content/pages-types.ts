@@ -93,9 +93,53 @@ export interface PagesDict {
     stepsKicker: string;
     stepsTitle: string;
     steps: { title: string; text: string }[];
+    nominateBanner: string;
+    nominateBannerCta: string;
     mapKicker: string;
     mapTitle: string;
     mapAddress: string;
+  };
+
+  nominate: {
+    hero: PageHeroContent;
+    form: {
+      sectionContact: string;
+      sectionVessel: string;
+      sectionCargo: string;
+      company: string;
+      name: string;
+      email: string;
+      phone: string;
+      vessel: string;
+      vesselHint: string;
+      port: string;
+      operation: string;
+      operations: { load: string; discharge: string };
+      cargoType: string;
+      cargoPlaceholder: string;
+      quantity: string;
+      quantityUnit: string;
+      laycanFrom: string;
+      laycanTo: string;
+      message: string;
+      submit: string;
+      sending: string;
+      success: string;
+      successNote: string;
+      error: string;
+      freeFormNote: string;
+      freeFormCta: string;
+    };
+    aside: {
+      title: string;
+      text: string;
+      dutyLabel: string;
+    };
+  };
+
+  downloads: {
+    presentationLabel: string;
+    presentationNote: string;
   };
 
   blog: {

@@ -153,6 +153,26 @@ export default async function AboutPage({
           </div>
         </section>
 
+        {/* Presentation download */}
+        <section className="border-t border-line bg-mist/50">
+          <div className="container-x flex flex-col items-start justify-between gap-6 py-14 sm:flex-row sm:items-center">
+            <div>
+              <p className="font-display text-h4">{getPages(lang).downloads.presentationLabel}</p>
+              <p className="mt-1 text-[0.9375rem] text-slate">
+                {getPages(lang).downloads.presentationNote}
+              </p>
+            </div>
+            <a
+              href="/downloads/Unitrans-Uniagent-Presentation.pdf"
+              download
+              className="group inline-flex shrink-0 items-center gap-3 bg-ink px-7 py-4 text-[0.9375rem] font-semibold text-paper transition-colors duration-300 hover:bg-navy"
+            >
+              PDF · 5&nbsp;MB
+              <span className="transition-transform duration-300 group-hover:translate-y-0.5">↓</span>
+            </a>
+          </div>
+        </section>
+
         <CtaBand content={getPages(lang).ctaBand} lang={lang} />
       </main>
       <Footer dict={dict} lang={lang} />

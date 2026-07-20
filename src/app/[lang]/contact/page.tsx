@@ -61,6 +61,20 @@ export default async function ContactPage({
           </ol>
         </section>
 
+        {/* Nomination banner */}
+        <section className="container-x pb-16">
+          <a
+            href={`/${lang}/nominate`}
+            className="group flex flex-col items-start justify-between gap-4 border border-navy bg-navy p-8 text-white transition-colors duration-300 hover:bg-navy-deep sm:flex-row sm:items-center"
+          >
+            <p className="text-lede max-w-2xl">{p.nominateBanner}</p>
+            <span className="micro inline-flex shrink-0 items-center gap-2 bg-white px-5 py-3 text-ink">
+              {p.nominateBannerCta}
+              <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
+            </span>
+          </a>
+        </section>
+
         {/* Form + info (flagship section reused) */}
         <Contact dict={dict} />
 

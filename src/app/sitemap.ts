@@ -3,7 +3,7 @@ import { getAllPosts } from "@/lib/cms";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://unitrans.bg";
 
-const PAGES = ["", "/about", "/services", "/cargo", "/ports", "/blog", "/contact"];
+const PAGES = ["", "/about", "/services", "/cargo", "/ports", "/blog", "/contact", "/nominate"];
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
