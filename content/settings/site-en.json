@@ -1,0 +1,42 @@
+{
+  "hero": {
+    "kicker": "Varna, Bulgaria · since 1993",
+    "titleLines": ["Your trusted", "partner in", "Bulgarian ports."],
+    "sub": "Ship agency, freight forwarding and customs brokerage — one coordinated team across all major Bulgarian ports, at any hour.",
+    "ctaPrimary": "Request support",
+    "ctaSecondary": "View services"
+  },
+  "stats": [
+    { "value": 1993, "label": "established", "plain": true },
+    { "value": 30, "suffix": "+", "label": "years of experience" },
+    { "value": 20, "label": "professionals" },
+    { "value": 10, "label": "ports covered" },
+    { "value": 365, "label": "days on duty" }
+  ],
+  "faq": [
+    {
+      "q": "Who are Unitrans Ltd. and Uniagent Varna Ltd.?",
+      "a": "Two specialised Bulgarian companies operating as one coordinated team since 1993, headquartered in Varna. Unitrans covers freight forwarding, customs brokerage and port logistics; Uniagent covers ship agency, husbandry services and ship repair coordination."
+    },
+    {
+      "q": "Which Bulgarian ports do you cover?",
+      "a": "All major commercial ports: Varna, Burgas and Balchik on the Black Sea, and the Danube ports of Ruse, Lom, Svishtov, Vidin, Silistra, Tutrakan and Oryahovo."
+    },
+    {
+      "q": "What does the ship agency service include?",
+      "a": "Arrival and departure formalities, vessel clearance and documentation, husbandry services, crew changes, spare parts delivery, bunkering coordination, ship repair assistance and dry-dock coordination."
+    },
+    {
+      "q": "Do you handle grain and bulk cargo?",
+      "a": "Yes — it is our core expertise. For over three decades we have handled wheat, corn, barley, sunflower seeds, rapeseed and vegetable oils, as well as fertilisers, steel, containers, project and breakbulk cargo."
+    },
+    {
+      "q": "Do you work outside standard business hours?",
+      "a": "Yes. Our duty teams provide coverage 365 days a year — shipping does not follow standard working hours, and neither do we."
+    },
+    {
+      "q": "How do I nominate a vessel or request a quote?",
+      "a": "Use the contact form, write to uniagent@unitrans.bg or call +359 52 632 130. Share the port, cargo and dates — we respond quickly."
+    }
+  ]
+}

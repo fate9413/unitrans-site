@@ -1,0 +1,128 @@
+# Decap CMS конфигурация — Unitrans & Uniagent
+#
+# ЛОКАЛНО (без акаунти): стартирайте `npm run cms` в отделен терминал
+# успоредно с `npm run dev`, отворете http://localhost:3010/cms/index.html
+#
+# ПРОДУКЦИЯ (Vercel + GitHub): попълнете repo по-долу и създайте GitHub
+# OAuth App (вижте /admin/guide). Редакциите стават commit-и → Vercel
+# автоматично publish-ва сайта след ~1 минута.
+
+backend:
+  name: github
+  repo: fate9413/unitrans-site
+  branch: main
+  base_url: https://unitrans.bg # ← след деплой: реалният адрес на сайта (хоства OAuth ръчката)
+  auth_endpoint: /api/oauth
+
+# Позволява локална работа без GitHub, когато decap-server върви (npm run cms)
+local_backend: true
+
+publish_mode: simple
+media_folder: "public/images/uploads"
+public_folder: "/images/uploads"
+
+locale: bg
+
+collections:
+  # ----------------------------------------------------------------
+  - name: posts
+    label: "Блог статии"
+    label_singular: "статия"
+    folder: "content/posts"
+    create: true
+    delete: true
+    extension: json
+    format: json
+    slug: "{{fields.slug}}"
+    identifier_field: title_bg
+    summary: "{{title_bg}} — {{date}}"
+    sortable_fields: [date, title_bg]
+    fields:
+      - { name: slug, label: "URL адрес (латиница, тирета)", widget: string, hint: "напр. grain-season-2027 — става част от адреса на статията" }
+      - { name: date, label: "Дата", widget: datetime, format: "YYYY-MM-DD", time_format: false }
+      - name: category
+        label: "Категория"
+        widget: select
+        options:
+          - { label: "Операции", value: operations }
+          - { label: "Товари", value: cargo }
+          - { label: "Митница", value: customs }
+          - { label: "Портове", value: ports }
+      - { name: cover, label: "Заглавна снимка", widget: image }
+      - { name: minutes, label: "Минути четене", widget: number, default: 5, value_type: int, min: 1, max: 30 }
+      - { name: title_bg, label: "Заглавие (BG)", widget: string }
+      - { name: excerpt_bg, label: "Кратко описание (BG)", widget: text }
+      - { name: body_bg, label: "Текст (BG)", widget: markdown, hint: "Заглавие: ## Текст · Списък: - точка · Цитат: > текст" }
+      - { name: title_en, label: "Заглавие (EN)", widget: string }
+      - { name: excerpt_en, label: "Кратко описание (EN)", widget: text }
+      - { name: body_en, label: "Текст (EN)", widget: markdown }
+
+  # ----------------------------------------------------------------
+  - name: settings
+    label: "Настройки на сайта"
+    files:
+      - name: contact
+        label: "Контакти (имейл · телефон · адрес)"
+        file: "content/settings/contact.json"
+        fields:
+          - { name: email, label: "Имейл", widget: string }
+          - { name: phone, label: "Телефон (за показване)", widget: string }
+          - { name: phoneHref, label: "Телефон (за набиране, без интервали)", widget: string }
+          - { name: addressBg, label: "Адрес (BG)", widget: string }
+          - { name: addressEn, label: "Адрес (EN)", widget: string }
+
+      - name: site_bg
+        label: "Начална страница + ЧЗВ (Български)"
+        file: "content/settings/site-bg.json"
+        fields:
+          - name: hero
+            label: "Начален екран"
+            widget: object
+            fields:
+              - { name: kicker, label: "Надзаглавие", widget: string }
+              - { name: titleLines, label: "Заглавие (по редове)", widget: list, field: { name: line, label: "Ред", widget: string } }
+              - { name: sub, label: "Подзаглавие", widget: text }
+              - { name: ctaPrimary, label: "Основен бутон", widget: string }
+              - { name: ctaSecondary, label: "Втори бутон", widget: string }
+          - name: stats
+            label: "Числа (лентата под началния екран)"
+            widget: list
+            fields:
+              - { name: value, label: "Стойност", widget: number, value_type: int }
+              - { name: suffix, label: "Суфикс (напр. +)", widget: string, required: false }
+              - { name: label, label: "Етикет", widget: string }
+              - { name: plain, label: "Без анимация на броене (за години)", widget: boolean, required: false }
+          - name: faq
+            label: "Често задавани въпроси"
+            widget: list
+            fields:
+              - { name: q, label: "Въпрос", widget: string }
+              - { name: a, label: "Отговор", widget: text }
+
+      - name: site_en
+        label: "Начална страница + ЧЗВ (English)"
+        file: "content/settings/site-en.json"
+        fields:
+          - name: hero
+            label: "Hero"
+            widget: object
+            fields:
+              - { name: kicker, label: "Kicker", widget: string }
+              - { name: titleLines, label: "Title lines", widget: list, field: { name: line, label: "Line", widget: string } }
+              - { name: sub, label: "Subtitle", widget: text }
+              - { name: ctaPrimary, label: "Primary button", widget: string }
+              - { name: ctaSecondary, label: "Secondary button", widget: string }
+          - name: stats
+            label: "Stats strip"
+            widget: list
+            fields:
+              - { name: value, label: "Value", widget: number, value_type: int }
+              - { name: suffix, label: "Suffix", widget: string, required: false }
+              - { name: label, label: "Label", widget: string }
+              - { name: plain, label: "No count animation", widget: boolean, required: false }
+          - name: faq
+            label: "FAQ"
+            widget: list
+            fields:
+              - { name: q, label: "Question", widget: string }
+              - { name: a, label: "Answer", widget: text }
