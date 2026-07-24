@@ -23,6 +23,8 @@ export async function generateMetadata({
     title: `${p.blog.hero.title} — Unitrans & Uniagent`,
     description: p.blog.hero.intro,
     alternates: { canonical: `/${lang}/blog`, languages: { en: "/en/blog", bg: "/bg/blog", "x-default": "/en/blog" } },
+    // Hidden pre-launch at the client's request — unlisted, not indexed.
+    robots: { index: false, follow: false },
   };
 }
 

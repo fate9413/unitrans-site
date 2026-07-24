@@ -7,7 +7,6 @@ import { PageHero } from "@/components/ui/PageHero";
 import { CtaBand } from "@/components/ui/CtaBand";
 import { Counter } from "@/components/ui/Counter";
 import { SectionHead } from "@/components/ui/SectionHead";
-import { TimelineSlider } from "@/components/pages/TimelineSlider";
 import { cn } from "@/lib/utils";
 
 export function generateStaticParams() {
@@ -43,25 +42,30 @@ export default async function AboutPage({
       <main>
         <PageHero {...p.hero} image="/images/about.webp" />
 
-        {/* Statement */}
-        <section className="container-x section-pad">
-          <p className="font-display max-w-5xl text-h2">
-            <span className="text-steel">—</span> {p.statement}
-          </p>
-        </section>
-
-        {/* Timeline slider */}
-        <section className="border-t border-line bg-mist/50 py-20 sm:py-28">
-          <div className="container-x mb-14">
-            <SectionHead num="01" kicker={p.timelineKicker} title={p.timelineTitle} />
+        {/* Company presentation — right under the hero, as requested */}
+        <section className="border-b border-line bg-mist/50">
+          <div className="container-x flex flex-col items-start justify-between gap-6 py-14 sm:flex-row sm:items-center">
+            <div>
+              <p className="font-display text-h4">{getPages(lang).downloads.presentationLabel}</p>
+              <p className="mt-1 text-[0.9375rem] text-slate">
+                {getPages(lang).downloads.presentationNote}
+              </p>
+            </div>
+            <a
+              href="/downloads/Unitrans-Uniagent-Presentation.pdf"
+              download
+              className="group inline-flex shrink-0 items-center gap-3 bg-ink px-7 py-4 text-[0.9375rem] font-semibold text-paper transition-colors duration-300 hover:bg-navy"
+            >
+              PDF · 5&nbsp;MB
+              <span className="transition-transform duration-300 group-hover:translate-y-0.5">↓</span>
+            </a>
           </div>
-          <TimelineSlider items={p.timeline} dragHint={p.dragHint} />
         </section>
 
         {/* Two companies */}
         <section className="container-x section-pad">
           <SectionHead
-            num="02"
+            num="01"
             kicker={p.companiesKicker}
             title={p.companiesTitle}
             sub={p.companiesIntro}
@@ -118,7 +122,7 @@ export default async function AboutPage({
         {/* Numbers band */}
         <section className="bg-ink-deep text-white">
           <div className="container-x section-pad">
-            <SectionHead num="03" kicker={p.numbersKicker} title={p.numbersTitle} dark />
+            <SectionHead num="02" kicker={p.numbersKicker} title={p.numbersTitle} dark />
             <div className="mt-16 grid grid-cols-2 gap-px bg-white/10 sm:grid-cols-3 lg:grid-cols-6">
               {p.numbers.map((n, i) => (
                 <div key={i} className="bg-ink-deep p-6 sm:p-8">
@@ -134,7 +138,7 @@ export default async function AboutPage({
 
         {/* Strengths */}
         <section className="container-x section-pad">
-          <SectionHead num="04" kicker={p.strengthsKicker} title={p.strengthsTitle} />
+          <SectionHead num="03" kicker={p.strengthsKicker} title={p.strengthsTitle} />
           <div className="mt-16 grid border-l border-t border-line sm:grid-cols-2 lg:grid-cols-4">
             {p.strengths.map((s, i) => (
               <div
@@ -150,26 +154,6 @@ export default async function AboutPage({
                 </p>
               </div>
             ))}
-          </div>
-        </section>
-
-        {/* Presentation download */}
-        <section className="border-t border-line bg-mist/50">
-          <div className="container-x flex flex-col items-start justify-between gap-6 py-14 sm:flex-row sm:items-center">
-            <div>
-              <p className="font-display text-h4">{getPages(lang).downloads.presentationLabel}</p>
-              <p className="mt-1 text-[0.9375rem] text-slate">
-                {getPages(lang).downloads.presentationNote}
-              </p>
-            </div>
-            <a
-              href="/downloads/Unitrans-Uniagent-Presentation.pdf"
-              download
-              className="group inline-flex shrink-0 items-center gap-3 bg-ink px-7 py-4 text-[0.9375rem] font-semibold text-paper transition-colors duration-300 hover:bg-navy"
-            >
-              PDF · 5&nbsp;MB
-              <span className="transition-transform duration-300 group-hover:translate-y-0.5">↓</span>
-            </a>
           </div>
         </section>
 

@@ -6,7 +6,6 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { PageHero } from "@/components/ui/PageHero";
 import { CtaBand } from "@/components/ui/CtaBand";
-import { SectionHead } from "@/components/ui/SectionHead";
 import { cn } from "@/lib/utils";
 
 export function generateStaticParams() {
@@ -134,24 +133,6 @@ export default async function ServicesPage({
             </section>
           );
         })}
-
-        {/* Compact process strip */}
-        <section className="border-t border-line">
-          <div className="container-x section-pad">
-            <SectionHead num="05" kicker={p.processKicker} title={p.processTitle} />
-            <ol className="mt-14 grid gap-px border border-line bg-line sm:grid-cols-2 lg:grid-cols-7">
-              {dict.process.steps.map((s, i) => (
-                <li key={s.name} className="bg-paper p-5">
-                  <p className="micro tabular-nums text-navy">{String(i + 1).padStart(2, "0")}</p>
-                  <p className="font-display mt-3 text-[0.9375rem] font-semibold leading-snug">
-                    {s.name}
-                  </p>
-                  <p className="mt-2 text-[0.8125rem] leading-relaxed text-slate">{s.desc}</p>
-                </li>
-              ))}
-            </ol>
-          </div>
-        </section>
 
         <CtaBand content={pages.ctaBand} lang={lang} />
       </main>

@@ -49,34 +49,13 @@ export default async function CargoPage({
           </div>
         </section>
 
-        {/* Additional cargo */}
+        {/* Ops note */}
         <section className="border-t border-line bg-mist/50">
           <div className="container-x section-pad">
-            <SectionHead num="02" kicker={p.additionalKicker} title={p.additionalTitle} />
-            <div className="mt-14 border-t border-line">
-              {p.additional.map((a, i) => (
-                <div
-                  key={a.name}
-                  className="group grid gap-2 border-b border-line py-6 transition-colors duration-300 hover:bg-paper sm:grid-cols-12 sm:items-baseline"
-                >
-                  <p className="micro tabular-nums text-steel sm:col-span-1 sm:pl-2">
-                    {String(i + 1).padStart(2, "0")}
-                  </p>
-                  <h3 className="font-display text-h4 sm:col-span-4">{a.name}</h3>
-                  <p className="text-[0.9375rem] leading-relaxed text-slate sm:col-span-7">
-                    {a.desc}
-                  </p>
-                </div>
-              ))}
+            <div className="max-w-4xl border-l-2 border-navy pl-8 sm:pl-12">
+              <p className="micro text-steel">{p.opsNoteTitle}</p>
+              <p className="font-display mt-6 text-h3 leading-[1.3]">{p.opsNote}</p>
             </div>
-          </div>
-        </section>
-
-        {/* Ops note */}
-        <section className="container-x section-pad">
-          <div className="max-w-4xl border-l-2 border-green pl-8 sm:pl-12">
-            <p className="micro text-steel">{p.opsNoteTitle}</p>
-            <p className="font-display mt-6 text-h3 leading-[1.3]">{p.opsNote}</p>
           </div>
         </section>
 

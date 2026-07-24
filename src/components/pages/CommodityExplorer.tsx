@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { Wheat } from "lucide-react";
+import { Package } from "lucide-react";
 import { cn, EASE_OUT_EXPO, SPRING_SNAPPY } from "@/lib/utils";
 
 export function CommodityExplorer({
@@ -29,7 +29,7 @@ export function CommodityExplorer({
                   <motion.span
                     layoutId="commodity-indicator"
                     transition={SPRING_SNAPPY}
-                    className="absolute left-0 top-0 h-full w-[3px] bg-green"
+                    className="absolute left-0 top-0 h-full w-[3px] bg-navy"
                   />
                 )}
                 <button
@@ -65,11 +65,11 @@ export function CommodityExplorer({
             <div className="flex items-start justify-between gap-6">
               <div>
                 <p className="font-display text-h3">{current.name}</p>
-                <p className="micro mt-3 inline-block border border-green/40 px-3 py-1.5 text-green">
+                <p className="micro mt-3 inline-block border border-line px-3 py-1.5 text-slate">
                   {current.season}
                 </p>
               </div>
-              <Wheat className="h-8 w-8 shrink-0 text-green/50" strokeWidth={1.5} />
+              <Package className="h-8 w-8 shrink-0 text-navy/40" strokeWidth={1.5} />
             </div>
             <p className="mt-8 max-w-xl text-[1.0625rem] leading-[1.7] text-slate">
               {current.desc}

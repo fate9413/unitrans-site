@@ -149,14 +149,14 @@ export const pagesEn: PagesDict = {
 
   cargo: {
     hero: {
-      kicker: "Cargo expertise",
-      title: "Grain is our native language.",
+      kicker: "Cargo",
+      title: "All cargo. One standard.",
       intro:
-        "Three decades of agricultural and bulk cargo through Bulgarian ports — we know the commodities, the seasons and the terminals in depth.",
+        "Three decades of experience with bulk, breakbulk, container and project cargo through Bulgarian ports — we know the commodities, the seasons and the terminals in depth.",
     },
-    explorerKicker: "Agricultural commodities",
-    explorerTitle: "The core crops we move.",
-    explorerHint: "Select a commodity",
+    explorerKicker: "The cargo",
+    explorerTitle: "What we work with.",
+    explorerHint: "Select a cargo type",
     commodities: [
       {
         name: "Wheat",
@@ -188,16 +188,35 @@ export const pagesEn: PagesDict = {
         season: "Year-round",
         desc: "Liquid bulk — sunflower and rapeseed oil. Coordination with bonded warehouses, fiscal procedures and specialised food-grade liquid terminals.",
       },
+      {
+        name: "Fertilisers",
+        season: "Year-round",
+        desc: "Bulk and bagged fertilisers — imports for the agricultural sector. Experience with the specific storage, moisture-protection and handling requirements.",
+      },
+      {
+        name: "Steel products",
+        season: "Year-round",
+        desc: "Coils, profiles, pipes and sheet — breakbulk operations with precise load planning and lashing of every parcel.",
+      },
+      {
+        name: "Containers",
+        season: "Year-round",
+        desc: "Full container services through the Varna and Burgas terminals — import, export and the accompanying documentation.",
+      },
+      {
+        name: "Project cargo",
+        season: "On request",
+        desc: "Out-of-gauge and heavy units — machinery, equipment, structures. Lift planning, securing, permits and inland transport.",
+      },
+      {
+        name: "Breakbulk cargo",
+        season: "Year-round",
+        desc: "Mixed breakbulk parcels — timber, palletised goods, equipment. Flexible coordination between vessel, warehouse and receivers.",
+      },
     ],
-    additionalKicker: "Additional experience",
-    additionalTitle: "Beyond grain.",
-    additional: [
-      { name: "Fertilisers", desc: "Bulk and bagged — imports for the agricultural sector, with their specific storage requirements." },
-      { name: "Steel products", desc: "Coils, profiles, pipes — breakbulk operations with careful attention to lashing." },
-      { name: "Containers", desc: "Full container services through the Varna and Burgas terminals." },
-      { name: "Project cargo", desc: "Out-of-gauge and heavy units — lift planning, securing and transport." },
-      { name: "Breakbulk cargo", desc: "Mixed breakbulk parcels — timber, palletised goods, equipment." },
-    ],
+    additionalKicker: "",
+    additionalTitle: "",
+    additional: [],
     opsNoteTitle: "How we run commodity operations",
     opsNote:
       "Commodity markets don't wait. So our operational standard is simple: accurate quantities every day, timely notice of every deviation, and coordination that never leaves a vessel waiting. Thirty years on, that is why traders keep coming back.",

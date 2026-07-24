@@ -37,6 +37,8 @@ export async function generateMetadata({
       publishedTime: post.date,
       images: [{ url: post.cover, width: 1600, height: 1000, alt: post[loc].title }],
     },
+    // Hidden pre-launch at the client's request — unlisted, not indexed.
+    robots: { index: false, follow: false },
   };
 }
 

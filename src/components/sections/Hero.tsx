@@ -55,9 +55,19 @@ export function Hero({ dict }: { dict: Dictionary }) {
 
       {/* Content */}
       <div className="container-x relative z-10 pb-10 pt-40">
-        <p className="animate-fade-in micro mb-8 text-white/60" style={{ animationDelay: "0.5s" }}>
-          {hero.kicker}
-        </p>
+        <div
+          className="animate-fade-in micro mb-8 flex flex-wrap items-center gap-x-5 gap-y-2 text-white/60"
+          style={{ animationDelay: "0.5s" }}
+        >
+          <span>{hero.kicker}</span>
+          <span className="hidden h-3 w-px bg-white/25 sm:block" aria-hidden />
+          <a
+            href={`mailto:${dict.contact.info.email}`}
+            className="link-slide text-white/85 hover:text-white"
+          >
+            {dict.contact.info.email}
+          </a>
+        </div>
         <h1 className="text-display max-w-5xl">
           {hero.titleLines.map((line, i) => (
             <span key={i} className="block overflow-hidden pb-[0.06em] -mb-[0.06em]">
@@ -80,7 +90,7 @@ export function Hero({ dict }: { dict: Dictionary }) {
           className="animate-fade-in mt-10 flex flex-wrap items-center gap-4"
           style={{ animationDelay: "0.7s" }}
         >
-          <Button href="#contact" variant="white">
+          <Button href={`/${dict.locale}/contact`} variant="white">
             {hero.ctaPrimary}
           </Button>
           <Button href="#services" variant="ghost-light">

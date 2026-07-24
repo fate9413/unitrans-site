@@ -16,7 +16,6 @@ export const en: Dictionary = {
       { href: "/services", label: "Services" },
       { href: "/cargo", label: "Cargo" },
       { href: "/ports", label: "Ports" },
-      { href: "/blog", label: "Blog" },
       { href: "/contact", label: "Contact" },
     ],
     cta: "Request support",
@@ -224,7 +223,6 @@ export const en: Dictionary = {
     hint: "Select a port on the map",
     hqBadge: "Head office",
     servicesLabel: "On site",
-    moreLink: "Port profiles + live vessel map",
     ports: [
       { id: "varna", name: "Varna", type: "sea", desc: "Bulgaria's largest Black Sea port and our head office. Full scope: agency, forwarding, customs and operations.", tags: ["Agency", "Forwarding", "Customs", "Operations"] },
       { id: "burgas", name: "Burgas", type: "sea", desc: "Key port for bulk and breakbulk cargo on the southern Black Sea coast.", tags: ["Agency", "Forwarding", "Customs"] },

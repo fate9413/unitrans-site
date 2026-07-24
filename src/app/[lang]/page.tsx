@@ -1,17 +1,11 @@
-import { getDictionary } from "@/content";
+import { getDictionary, getPages } from "@/content";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Hero } from "@/components/sections/Hero";
-import { LogoMarquee } from "@/components/sections/LogoMarquee";
 import { About } from "@/components/sections/About";
 import { Services } from "@/components/sections/Services";
-import { Process } from "@/components/sections/Process";
 import { Operations } from "@/components/sections/Operations";
-import { Cargo } from "@/components/sections/Cargo";
-import { PortsMap } from "@/components/sections/PortsMap";
-import { Clients } from "@/components/sections/Clients";
-import { Faq } from "@/components/sections/Faq";
-import { Contact } from "@/components/sections/Contact";
+import { CtaBand } from "@/components/ui/CtaBand";
 
 export default async function Page({
   params,
@@ -20,6 +14,7 @@ export default async function Page({
 }) {
   const { lang } = await params;
   const dict = getDictionary(lang);
+  const pages = getPages(lang);
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -63,14 +58,6 @@ export default async function Page({
         publisher: { "@id": "https://unitrans.bg/#org" },
         inLanguage: [lang === "bg" ? "bg" : "en"],
       },
-      {
-        "@type": "FAQPage",
-        mainEntity: dict.faq.items.map((f) => ({
-          "@type": "Question",
-          name: f.q,
-          acceptedAnswer: { "@type": "Answer", text: f.a },
-        })),
-      },
     ],
   };
 
@@ -83,16 +70,10 @@ export default async function Page({
       <Header dict={dict} lang={lang} />
       <main>
         <Hero dict={dict} />
-        <LogoMarquee dict={dict} />
         <About dict={dict} />
         <Services dict={dict} />
-        <Process dict={dict} />
         <Operations dict={dict} />
-        <Cargo dict={dict} />
-        <PortsMap dict={dict} />
-        <Clients dict={dict} />
-        <Faq dict={dict} />
-        <Contact dict={dict} />
+        <CtaBand content={pages.ctaBand} lang={lang} />
       </main>
       <Footer dict={dict} lang={lang} />
     </>

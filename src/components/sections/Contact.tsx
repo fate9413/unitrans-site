@@ -19,7 +19,6 @@ const inputCls = cn(
 export function Contact({ dict }: { dict: Dictionary }) {
   const { contact } = dict;
   const [status, setStatus] = useState<Status>("idle");
-  const [topic, setTopic] = useState(contact.form.topics[0]);
   const formRef = useRef<HTMLFormElement>(null);
 
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
@@ -31,7 +30,6 @@ export function Contact({ dict }: { dict: Dictionary }) {
       company: String(fd.get("company") ?? ""),
       email: String(fd.get("email") ?? ""),
       phone: String(fd.get("phone") ?? ""),
-      topic,
       message: String(fd.get("message") ?? ""),
       website: String(fd.get("website") ?? ""),
     };
@@ -181,27 +179,6 @@ export function Contact({ dict }: { dict: Dictionary }) {
                       </label>
                       <input id="cf-phone" name="phone" type="tel" className={inputCls} />
                     </div>
-                    <fieldset className="sm:col-span-2">
-                      <legend className="micro mb-3 text-slate">{contact.form.topic}</legend>
-                      <div className="flex flex-wrap gap-2">
-                        {contact.form.topics.map((t) => (
-                          <button
-                            key={t}
-                            type="button"
-                            onClick={() => setTopic(t)}
-                            aria-pressed={topic === t}
-                            className={cn(
-                              "border px-4 py-2.5 text-[0.875rem] font-medium transition-colors duration-300",
-                              topic === t
-                                ? "border-navy bg-navy text-white"
-                                : "border-line text-slate hover:border-ink hover:text-ink"
-                            )}
-                          >
-                            {t}
-                          </button>
-                        ))}
-                      </div>
-                    </fieldset>
                     <div className="sm:col-span-2">
                       <label htmlFor="cf-message" className="micro text-slate">
                         {contact.form.message} *
