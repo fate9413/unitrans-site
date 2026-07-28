@@ -1,7 +1,7 @@
 import { getDictionary, getPages } from "@/content";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-import { Hero } from "@/components/sections/Hero";
+import { Hero, HeroStats } from "@/components/sections/Hero";
 import { About } from "@/components/sections/About";
 import { Services } from "@/components/sections/Services";
 import { Operations } from "@/components/sections/Operations";
@@ -70,6 +70,7 @@ export default async function Page({
       <Header dict={dict} lang={lang} />
       <main>
         <Hero dict={dict} />
+        <HeroStats dict={dict} />
         <About dict={dict} />
         <Services dict={dict} />
         <Operations dict={dict} />

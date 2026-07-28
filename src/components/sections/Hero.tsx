@@ -53,8 +53,8 @@ export function Hero({ dict }: { dict: Dictionary }) {
       <div className="absolute inset-0 bg-ink-deep/40" />
       <div className="absolute inset-0 bg-gradient-to-t from-ink-deep/85 via-ink-deep/20 to-transparent" />
 
-      {/* Content */}
-      <div className="container-x relative z-10 pb-6 pt-28 sm:pb-10 sm:pt-40">
+      {/* Content — extra bottom space on mobile keeps the floating menu clear */}
+      <div className="container-x relative z-10 pb-24 pt-28 sm:pb-10 sm:pt-40">
         <div
           className="animate-fade-in micro mb-5 flex flex-wrap items-center gap-x-5 gap-y-2 text-white/60 sm:mb-8"
           style={{ animationDelay: "0.5s" }}
@@ -151,19 +151,43 @@ export function Hero({ dict }: { dict: Dictionary }) {
         </div>
       </div>
 
-      {/* KPI strip — single compact row, swipeable on mobile */}
-      <div className="relative z-10 border-t border-white/15 bg-ink-deep/70">
-        <div className="container-x scrollbar-none flex gap-8 overflow-x-auto py-4 pr-24 sm:gap-12 sm:py-6 sm:pr-[clamp(1.25rem,5vw,5rem)]">
-          {hero.stats.map((s, i) => (
-            <div key={i} className="shrink-0">
-              <p className="font-display text-[1.25rem] font-bold leading-none tracking-[-0.02em] tabular-nums sm:text-[1.625rem]">
-                <Counter value={s.value} suffix={s.suffix ?? ""} plain={s.plain} />
-              </p>
-              <p className="micro mt-1.5 whitespace-nowrap text-white/50">{s.label}</p>
+    </section>
+  );
+}
+
+export function HeroStats({ dict }: { dict: Dictionary }) {
+  const stats = dict.hero.stats;
+  return (
+    <div className="border-t border-white/10 bg-ink-deep text-white">
+      {/* Mobile: self-moving ticker, values rendered instantly */}
+      <div className="flex overflow-hidden sm:hidden">
+        <div
+          className="animate-marquee flex w-max items-center py-4"
+          style={{ animationDuration: "22s" }}
+        >
+          {[...stats, ...stats].map((s, i) => (
+            <div key={i} className="mr-10 flex shrink-0 items-baseline gap-2.5" aria-hidden={i >= stats.length}>
+              <span className="font-display text-[1.25rem] font-bold leading-none tracking-[-0.02em] tabular-nums">
+                {s.value}
+                {s.suffix ?? ""}
+              </span>
+              <span className="micro whitespace-nowrap text-white/50">{s.label}</span>
             </div>
           ))}
         </div>
       </div>
-    </section>
+
+      {/* Desktop: static row with count-up */}
+      <div className="container-x hidden gap-12 py-6 sm:flex">
+        {stats.map((s, i) => (
+          <div key={i} className="shrink-0">
+            <p className="font-display text-[1.625rem] font-bold leading-none tracking-[-0.02em] tabular-nums">
+              <Counter value={s.value} suffix={s.suffix ?? ""} plain={s.plain} />
+            </p>
+            <p className="micro mt-1.5 whitespace-nowrap text-white/50">{s.label}</p>
+          </div>
+        ))}
+      </div>
+    </div>
   );
 }

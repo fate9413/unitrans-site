@@ -15,7 +15,8 @@ export function Counter({
   className?: string;
 }) {
   const ref = useRef<HTMLSpanElement>(null);
-  const inView = useInView(ref, { once: true, margin: "-10% 0px" });
+  // margin 0: fire even when the element sits at the very edge of the viewport
+  const inView = useInView(ref, { once: true, margin: "0px" });
 
   useEffect(() => {
     const el = ref.current;
