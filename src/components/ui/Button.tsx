@@ -48,8 +48,8 @@ export function Button({
   };
 
   const cls = cn(
-    "group inline-flex select-none items-center justify-center gap-3 px-7 py-4",
-    "text-[0.9375rem] font-semibold tracking-[-0.01em] whitespace-nowrap",
+    "group inline-flex select-none items-center justify-center gap-2.5 px-5 py-3 sm:gap-3 sm:px-7 sm:py-4",
+    "text-[0.875rem] font-semibold tracking-[-0.01em] whitespace-nowrap sm:text-[0.9375rem]",
     "transition-[background-color,border-color,color] duration-300",
     "disabled:pointer-events-none disabled:opacity-50",
     styles[variant],
@@ -61,7 +61,7 @@ export function Button({
       <span>{children}</span>
       {arrow && (
         <ArrowRight
-          className="h-4 w-4 transition-transform duration-500 [transition-timing-function:cubic-bezier(0.16,1,0.3,1)] group-hover:translate-x-1.5"
+          className="hidden h-4 w-4 transition-transform duration-500 [transition-timing-function:cubic-bezier(0.16,1,0.3,1)] group-hover:translate-x-1.5 sm:block"
           strokeWidth={2.2}
         />
       )}

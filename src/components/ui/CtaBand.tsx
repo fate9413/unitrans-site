@@ -11,7 +11,7 @@ export function CtaBand({ content, lang }: { content: CtaBandContent; lang: stri
         </div>
         <a
           href={`/${lang}/contact`}
-          className="group inline-flex shrink-0 items-center gap-3 bg-white px-8 py-5 text-[0.9375rem] font-semibold text-ink transition-colors duration-300 hover:bg-mist"
+          className="group inline-flex shrink-0 items-center gap-3 bg-white px-6 py-4 text-[0.875rem] font-semibold text-ink transition-colors duration-300 hover:bg-mist sm:px-8 sm:py-5 sm:text-[0.9375rem]"
         >
           {content.button}
           <ArrowRight

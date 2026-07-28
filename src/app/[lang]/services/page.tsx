@@ -51,7 +51,7 @@ export default async function ServicesPage({
 
         {/* In-page nav */}
         <nav
-          className="sticky top-[4.5rem] z-30 border-b border-line bg-paper/95"
+          className="sticky top-16 z-30 border-b border-line bg-paper/95 sm:top-[4.5rem]"
           aria-label={p.navLabel}
         >
           <div className="container-x flex items-center gap-6 overflow-x-auto py-4">

@@ -25,28 +25,28 @@
   --font-display: "Inter Tight", "Inter", system-ui, sans-serif;
   --font-body: "Inter", system-ui, sans-serif;
 
-  /* -- Fluid type scale --------------------------------------- */
-  --text-display: clamp(2.75rem, 1rem + 7.2vw, 6.5rem);
-  --text-display--line-height: 0.98;
-  --text-display--letter-spacing: -0.04em;
+  /* -- Fluid type scale (refined: tighter minimums for mobile) - */
+  --text-display: clamp(2.125rem, 0.9rem + 6vw, 5.75rem);
+  --text-display--line-height: 1;
+  --text-display--letter-spacing: -0.038em;
   --text-display--font-weight: 700;
 
-  --text-h2: clamp(2rem, 1rem + 3.6vw, 4rem);
-  --text-h2--line-height: 1.04;
-  --text-h2--letter-spacing: -0.035em;
+  --text-h2: clamp(1.625rem, 0.9rem + 3vw, 3.5rem);
+  --text-h2--line-height: 1.06;
+  --text-h2--letter-spacing: -0.03em;
   --text-h2--font-weight: 650;
 
-  --text-h3: clamp(1.5rem, 1rem + 1.6vw, 2.25rem);
-  --text-h3--line-height: 1.12;
-  --text-h3--letter-spacing: -0.025em;
+  --text-h3: clamp(1.3125rem, 1rem + 1.3vw, 2rem);
+  --text-h3--line-height: 1.15;
+  --text-h3--letter-spacing: -0.022em;
   --text-h3--font-weight: 600;
 
-  --text-h4: clamp(1.125rem, 1rem + 0.5vw, 1.375rem);
-  --text-h4--line-height: 1.25;
-  --text-h4--letter-spacing: -0.015em;
+  --text-h4: clamp(1.0625rem, 1rem + 0.35vw, 1.25rem);
+  --text-h4--line-height: 1.3;
+  --text-h4--letter-spacing: -0.012em;
   --text-h4--font-weight: 600;
 
-  --text-lede: clamp(1.0625rem, 1rem + 0.45vw, 1.3125rem);
+  --text-lede: clamp(1rem, 0.95rem + 0.35vw, 1.1875rem);
   --text-lede--line-height: 1.55;
 
   --text-micro: 0.75rem;
@@ -136,13 +136,21 @@ h1, h2, h3, h4 {
 
 /* vertical rhythm between page sections */
 @utility section-pad {
-  padding-block: clamp(6rem, 6rem + 6vw, 11rem);
+  padding-block: clamp(4.5rem, 3.5rem + 6vw, 10rem);
 }
 @utility section-pad-t {
-  padding-block-start: clamp(6rem, 6rem + 6vw, 11rem);
+  padding-block-start: clamp(4.5rem, 3.5rem + 6vw, 10rem);
 }
 @utility section-pad-b {
-  padding-block-end: clamp(6rem, 6rem + 6vw, 11rem);
+  padding-block-end: clamp(4.5rem, 3.5rem + 6vw, 10rem);
+}
+
+/* horizontal scroller without a visible scrollbar */
+@utility scrollbar-none {
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 /* uppercase micro label */

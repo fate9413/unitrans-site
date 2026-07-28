@@ -32,8 +32,8 @@ export function PageHero({
       )}
       <div
         className={cn(
-          "container-x relative z-10 pb-16 sm:pb-20",
-          compact ? "pt-36" : "pt-44 sm:pt-52"
+          "container-x relative z-10 pb-12 sm:pb-20",
+          compact ? "pt-28 sm:pt-36" : "pt-32 sm:pt-52"
         )}
       >
         <p className="animate-fade-in micro text-white/55" style={{ animationDelay: "0.35s" }}>

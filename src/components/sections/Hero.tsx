@@ -54,9 +54,9 @@ export function Hero({ dict }: { dict: Dictionary }) {
       <div className="absolute inset-0 bg-gradient-to-t from-ink-deep/85 via-ink-deep/20 to-transparent" />
 
       {/* Content */}
-      <div className="container-x relative z-10 pb-10 pt-40">
+      <div className="container-x relative z-10 pb-6 pt-28 sm:pb-10 sm:pt-40">
         <div
-          className="animate-fade-in micro mb-8 flex flex-wrap items-center gap-x-5 gap-y-2 text-white/60"
+          className="animate-fade-in micro mb-5 flex flex-wrap items-center gap-x-5 gap-y-2 text-white/60 sm:mb-8"
           style={{ animationDelay: "0.5s" }}
         >
           <span>{hero.kicker}</span>
@@ -81,30 +81,38 @@ export function Hero({ dict }: { dict: Dictionary }) {
           ))}
         </h1>
         <p
-          className="animate-fade-in text-lede mt-8 max-w-xl text-white/75"
+          className="animate-fade-in text-lede mt-5 max-w-xl text-white/75 sm:mt-8"
           style={{ animationDelay: "0.55s" }}
         >
           {hero.sub}
         </p>
         <div
-          className="animate-fade-in mt-10 flex flex-wrap items-center gap-4"
+          className="animate-fade-in mt-7 grid w-full grid-cols-2 items-center gap-3 sm:mt-10 sm:flex sm:w-auto sm:gap-4"
           style={{ animationDelay: "0.7s" }}
         >
-          <Button href={`/${dict.locale}/contact`} variant="white">
+          <Button
+            href={`/${dict.locale}/contact`}
+            variant="white"
+            className="w-full px-3 sm:w-auto sm:px-7"
+          >
             {hero.ctaPrimary}
           </Button>
-          <Button href="#services" variant="ghost-light">
+          <Button
+            href="#services"
+            variant="ghost-light"
+            className="w-full px-3 sm:w-auto sm:px-7"
+          >
             {hero.ctaSecondary}
           </Button>
         </div>
 
         {/* Slider chrome */}
         <div
-          className="animate-fade-in mt-16 flex items-end justify-between gap-6"
+          className="animate-fade-in mt-8 flex items-end justify-between gap-6 sm:mt-16"
           style={{ animationDelay: "0.85s" }}
         >
           <div className="flex items-center gap-5">
-            <span className="font-display text-sm font-semibold tabular-nums tracking-wide">
+            <span className="font-display whitespace-nowrap text-sm font-semibold tabular-nums tracking-wide">
               0{index + 1}
               <span className="text-white/40"> / 0{n}</span>
             </span>
@@ -115,7 +123,10 @@ export function Hero({ dict }: { dict: Dictionary }) {
                 style={{ animation: `fillbar ${SLIDE_MS}ms linear forwards` }}
               />
             </div>
-            <span key={`cap-${index}`} className="animate-fade-in micro text-white/55">
+            <span
+              key={`cap-${index}`}
+              className="animate-fade-in micro hidden text-white/55 sm:block"
+            >
               {hero.slides[index].caption}
             </span>
           </div>
@@ -124,7 +135,7 @@ export function Hero({ dict }: { dict: Dictionary }) {
               type="button"
               aria-label="Previous slide"
               onClick={() => setIndex((i) => (i - 1 + n) % n)}
-              className="flex h-12 w-12 items-center justify-center border border-white/25 text-white transition-colors duration-300 hover:bg-white hover:text-ink"
+              className="flex h-10 w-10 items-center justify-center border border-white/25 text-white transition-colors duration-300 hover:bg-white hover:text-ink sm:h-12 sm:w-12"
             >
               <ArrowLeft className="h-4 w-4" strokeWidth={2.2} />
             </button>
@@ -132,7 +143,7 @@ export function Hero({ dict }: { dict: Dictionary }) {
               type="button"
               aria-label="Next slide"
               onClick={() => setIndex((i) => (i + 1) % n)}
-              className="-ml-px flex h-12 w-12 items-center justify-center border border-white/25 text-white transition-colors duration-300 hover:bg-white hover:text-ink"
+              className="-ml-px flex h-10 w-10 items-center justify-center border border-white/25 text-white transition-colors duration-300 hover:bg-white hover:text-ink sm:h-12 sm:w-12"
             >
               <ArrowRight className="h-4 w-4" strokeWidth={2.2} />
             </button>
@@ -140,15 +151,15 @@ export function Hero({ dict }: { dict: Dictionary }) {
         </div>
       </div>
 
-      {/* KPI strip */}
+      {/* KPI strip — single compact row, swipeable on mobile */}
       <div className="relative z-10 border-t border-white/15 bg-ink-deep/70">
-        <div className="container-x grid grid-cols-2 gap-y-6 py-7 sm:grid-cols-3 lg:grid-cols-5">
+        <div className="container-x scrollbar-none flex gap-8 overflow-x-auto py-4 pr-24 sm:gap-12 sm:py-6 sm:pr-[clamp(1.25rem,5vw,5rem)]">
           {hero.stats.map((s, i) => (
-            <div key={i} className="pr-6">
-              <p className="font-display text-[1.75rem] font-bold leading-none tracking-[-0.02em] tabular-nums">
+            <div key={i} className="shrink-0">
+              <p className="font-display text-[1.25rem] font-bold leading-none tracking-[-0.02em] tabular-nums sm:text-[1.625rem]">
                 <Counter value={s.value} suffix={s.suffix ?? ""} plain={s.plain} />
               </p>
-              <p className="micro mt-2 text-white/50">{s.label}</p>
+              <p className="micro mt-1.5 whitespace-nowrap text-white/50">{s.label}</p>
             </div>
           ))}
         </div>
